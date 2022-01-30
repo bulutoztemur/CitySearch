@@ -30,7 +30,7 @@ extension CitySearchVC: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeue(cellClass: CityCell.self, forIndexPath: indexPath)
         guard let city = DataKeeperManager.cityList[safe: indexPath.row] else { return UITableViewCell() }
         cell.configure(titleLabelText: "\(city.name) - \(city.country)",
-                       subtitleLabelText: "Latitude: \(city.coordinate.latitude ?? 0) | Longitude: \(city.coordinate.longitude ?? 0)")
+                       subtitleLabelText: "(\(city.coordinate.latitude ?? 0), \(city.coordinate.longitude ?? 0))")
         return cell
     }
     
