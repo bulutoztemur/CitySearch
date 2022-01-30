@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		885D5F5627A5F32F00F4700B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D5F5527A5F32F00F4700B /* AppDelegate.swift */; };
 		885D5F5827A5F32F00F4700B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D5F5727A5F32F00F4700B /* SceneDelegate.swift */; };
-		885D5F5A27A5F32F00F4700B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D5F5927A5F32F00F4700B /* ViewController.swift */; };
 		885D5F5F27A5F33000F4700B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885D5F5E27A5F33000F4700B /* Assets.xcassets */; };
 		885D5F6227A5F33000F4700B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885D5F6027A5F33000F4700B /* LaunchScreen.storyboard */; };
 		885D5F6D27A5F33000F4700B /* BackbaseCitySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D5F6C27A5F33000F4700B /* BackbaseCitySearchTests.swift */; };
 		885D5F7827A5F33000F4700B /* BackbaseCitySearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D5F7727A5F33000F4700B /* BackbaseCitySearchUITests.swift */; };
 		885D5F8927A69E8400F4700B /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 885D5F8827A69E8400F4700B /* cities.json */; };
+		885D5FA127A6A1A500F4700B /* CitySearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D5F9F27A6A1A500F4700B /* CitySearchVC.swift */; };
+		885D5FA227A6A1A500F4700B /* CitySearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 885D5FA027A6A1A500F4700B /* CitySearchVC.xib */; };
+		885D5FAA27A6A1B200F4700B /* CitySearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D5FA927A6A1B200F4700B /* CitySearchVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +40,9 @@
 		885D5F5227A5F32F00F4700B /* BackbaseCitySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackbaseCitySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		885D5F5527A5F32F00F4700B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		885D5F5727A5F32F00F4700B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		885D5F5927A5F32F00F4700B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		885D5F5E27A5F33000F4700B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		885D5F6127A5F33000F4700B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		885D5F6327A5F33000F4700B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		885D5F6327A5F33000F4700B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = BackbaseCitySearch/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		885D5F6827A5F33000F4700B /* BackbaseCitySearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackbaseCitySearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		885D5F6C27A5F33000F4700B /* BackbaseCitySearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackbaseCitySearchTests.swift; sourceTree = "<group>"; };
 		885D5F6E27A5F33000F4700B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		885D5F7727A5F33000F4700B /* BackbaseCitySearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackbaseCitySearchUITests.swift; sourceTree = "<group>"; };
 		885D5F7927A5F33000F4700B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		885D5F8827A69E8400F4700B /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
+		885D5F9F27A6A1A500F4700B /* CitySearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchVC.swift; sourceTree = "<group>"; };
+		885D5FA027A6A1A500F4700B /* CitySearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitySearchVC.xib; sourceTree = "<group>"; };
+		885D5FA927A6A1B200F4700B /* CitySearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +103,11 @@
 		885D5F5427A5F32F00F4700B /* BackbaseCitySearch */ = {
 			isa = PBXGroup;
 			children = (
+				885D5FB427A6A28500F4700B /* Resources */,
+				885D5FB027A6A27400F4700B /* AppDelegate */,
+				885D5FAF27A6A26F00F4700B /* Common */,
+				885D5F9D27A6A00A00F4700B /* Application */,
 				885D5F8827A69E8400F4700B /* cities.json */,
-				885D5F5527A5F32F00F4700B /* AppDelegate.swift */,
-				885D5F5727A5F32F00F4700B /* SceneDelegate.swift */,
-				885D5F5927A5F32F00F4700B /* ViewController.swift */,
-				885D5F5E27A5F33000F4700B /* Assets.xcassets */,
-				885D5F6027A5F33000F4700B /* LaunchScreen.storyboard */,
-				885D5F6327A5F33000F4700B /* Info.plist */,
 			);
 			path = BackbaseCitySearch;
 			sourceTree = "<group>";
@@ -126,6 +128,50 @@
 				885D5F7927A5F33000F4700B /* Info.plist */,
 			);
 			path = BackbaseCitySearchUITests;
+			sourceTree = "<group>";
+		};
+		885D5F9D27A6A00A00F4700B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				885D5F9E27A6A17500F4700B /* CitySearch */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		885D5F9E27A6A17500F4700B /* CitySearch */ = {
+			isa = PBXGroup;
+			children = (
+				885D5F9F27A6A1A500F4700B /* CitySearchVC.swift */,
+				885D5FA027A6A1A500F4700B /* CitySearchVC.xib */,
+				885D5FA927A6A1B200F4700B /* CitySearchVM.swift */,
+			);
+			path = CitySearch;
+			sourceTree = "<group>";
+		};
+		885D5FAF27A6A26F00F4700B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		885D5FB027A6A27400F4700B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				885D5F5527A5F32F00F4700B /* AppDelegate.swift */,
+				885D5F5727A5F32F00F4700B /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		885D5FB427A6A28500F4700B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				885D5F5E27A5F33000F4700B /* Assets.xcassets */,
+				885D5F6027A5F33000F4700B /* LaunchScreen.storyboard */,
+				885D5F6327A5F33000F4700B /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				885D5F8927A69E8400F4700B /* cities.json in Resources */,
+				885D5FA227A6A1A500F4700B /* CitySearchVC.xib in Resources */,
 				885D5F6227A5F33000F4700B /* LaunchScreen.storyboard in Resources */,
 				885D5F5F27A5F33000F4700B /* Assets.xcassets in Resources */,
 			);
@@ -258,9 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				885D5F5A27A5F32F00F4700B /* ViewController.swift in Sources */,
+				885D5FA127A6A1A500F4700B /* CitySearchVC.swift in Sources */,
 				885D5F5627A5F32F00F4700B /* AppDelegate.swift in Sources */,
 				885D5F5827A5F32F00F4700B /* SceneDelegate.swift in Sources */,
+				885D5FAA27A6A1B200F4700B /* CitySearchVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +478,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65S558ZT4U;
-				INFOPLIST_FILE = BackbaseCitySearch/Info.plist;
+				INFOPLIST_FILE = BackbaseCitySearch/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,7 +497,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65S558ZT4U;
-				INFOPLIST_FILE = BackbaseCitySearch/Info.plist;
+				INFOPLIST_FILE = BackbaseCitySearch/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
