@@ -15,6 +15,7 @@
 		885D5F6227A5F33000F4700B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885D5F6027A5F33000F4700B /* LaunchScreen.storyboard */; };
 		885D5F6D27A5F33000F4700B /* BackbaseCitySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D5F6C27A5F33000F4700B /* BackbaseCitySearchTests.swift */; };
 		885D5F7827A5F33000F4700B /* BackbaseCitySearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D5F7727A5F33000F4700B /* BackbaseCitySearchUITests.swift */; };
+		885D5F8927A69E8400F4700B /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 885D5F8827A69E8400F4700B /* cities.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		885D5F7327A5F33000F4700B /* BackbaseCitySearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackbaseCitySearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		885D5F7727A5F33000F4700B /* BackbaseCitySearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackbaseCitySearchUITests.swift; sourceTree = "<group>"; };
 		885D5F7927A5F33000F4700B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		885D5F8827A69E8400F4700B /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		885D5F5427A5F32F00F4700B /* BackbaseCitySearch */ = {
 			isa = PBXGroup;
 			children = (
+				885D5F8827A69E8400F4700B /* cities.json */,
 				885D5F5527A5F32F00F4700B /* AppDelegate.swift */,
 				885D5F5727A5F32F00F4700B /* SceneDelegate.swift */,
 				885D5F5927A5F32F00F4700B /* ViewController.swift */,
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				885D5F8927A69E8400F4700B /* cities.json in Resources */,
 				885D5F6227A5F33000F4700B /* LaunchScreen.storyboard in Resources */,
 				885D5F5F27A5F33000F4700B /* Assets.xcassets in Resources */,
 				885D5F5D27A5F32F00F4700B /* Main.storyboard in Resources */,
