@@ -8,6 +8,10 @@
 import UIKit
 
 public extension UITableViewCell {
+    static var nibName: String {
+        return String(describing: self)
+    }
+    
     static var reuseIdentifier: String {
         return String(describing: self)
     }

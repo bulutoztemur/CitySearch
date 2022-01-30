@@ -15,8 +15,56 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="418" height="124"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbO-ns-RRM" userLabel="InsideView">
+                        <rect key="frame" x="16" y="8" width="386" height="108"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wa5-T0-AQR">
+                                <rect key="frame" x="16" y="16" width="354" height="76"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfp-AK-vM5">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="33"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAJ-aR-x62">
+                                        <rect key="frame" x="0.0" y="45" width="354" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wa5-T0-AQR" firstAttribute="top" secondItem="dbO-ns-RRM" secondAttribute="top" constant="16" id="YQE-AA-U8z"/>
+                            <constraint firstAttribute="trailing" secondItem="wa5-T0-AQR" secondAttribute="trailing" constant="16" id="lXN-c9-RBN"/>
+                            <constraint firstItem="wa5-T0-AQR" firstAttribute="leading" secondItem="dbO-ns-RRM" secondAttribute="leading" constant="16" id="o9R-QX-SQC"/>
+                            <constraint firstAttribute="bottom" secondItem="wa5-T0-AQR" secondAttribute="bottom" constant="16" id="tPb-5g-mhQ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="dbO-ns-RRM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="436-eT-vo2"/>
+                    <constraint firstItem="dbO-ns-RRM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="8vU-c3-bWa"/>
+                    <constraint firstAttribute="trailing" secondItem="dbO-ns-RRM" secondAttribute="trailing" constant="16" id="aso-NZ-9rR"/>
+                    <constraint firstAttribute="bottom" secondItem="dbO-ns-RRM" secondAttribute="bottom" constant="8" id="ocF-Vv-1pU"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="subtitleLabel" destination="OAJ-aR-x62" id="Fhw-rC-DVM"/>
+                <outlet property="titleLabel" destination="Wfp-AK-vM5" id="gPL-hW-vpQ"/>
+            </connections>
             <point key="canvasLocation" x="2.8985507246376816" y="142.63392857142856"/>
         </tableViewCell>
     </objects>

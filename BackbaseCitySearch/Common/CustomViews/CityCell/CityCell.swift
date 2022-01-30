@@ -9,15 +9,11 @@ import UIKit
 
 class CityCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var subtitleLabel: UILabel!
     
+    func configure(titleLabelText: String, subtitleLabelText: String) {
+        titleLabel.text = titleLabelText
+        subtitleLabel.text = subtitleLabelText
+    }
 }

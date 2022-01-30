@@ -8,5 +8,9 @@
 import Foundation
 
 final class DataKeeperManager {
-    static let cityInfo = Bundle.main.decode([City].self, from: "cities.json")
+    static var cityList: [City] = {
+        var cities = Bundle.main.decode([City].self, from: "cities.json")
+        cities.sort { $0.name < $1.name }
+        return cities
+    }()
 }
