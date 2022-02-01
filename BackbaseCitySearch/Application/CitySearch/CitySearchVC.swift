@@ -13,10 +13,12 @@ class CitySearchVC: UIViewController {
     @IBOutlet weak private var citySearchBar: UISearchBar!
     @IBOutlet weak private var cityTableView: UITableView! {
         didSet {
-            cityTableView.register(cellClass: CityCell.self)
+            cityTableView.registerWithNib(cellClass: CityCell.self)
+            cityTableView.rowHeight = UITableView.automaticDimension
+            cityTableView.estimatedRowHeight = 600
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,7 +34,23 @@ extension CitySearchVC: UITableViewDataSource, UITableViewDelegate {
         guard let city = viewModel.cityList[safe: indexPath.row] else { return UITableViewCell() }
         let cell = tableView.dequeue(cellClass: CityCell.self, forIndexPath: indexPath)
         cell.configure(titleLabelText: "\(city.name) - \(city.country)",
-                       subtitleLabelText: "\(city.coordinate.latitude ?? 0), \(city.coordinate.longitude ?? 0)")
+                       subtitleLabelText: "\(city.coordinate.latitude ?? 0), \(city.coordinate.longitude ?? 0)",
+                       tableViewHeight: cityTableView.frame.size.height,
+                       cityCoordinate: city.coordinate)
         return cell
+    }
+        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cityTableView.isUserInteractionEnabled = false
+        UIView.animate(withDuration: 0.5) {
+            self.cityTableView.performBatchUpdates(nil)
+            self.scrollToTop(rowNumber: indexPath.row)
+            self.cityTableView.isUserInteractionEnabled = true
+        }
+    }
+    
+    private func scrollToTop(rowNumber: Int) {
+        let topRow = IndexPath(row: rowNumber, section: 0)
+        self.cityTableView.scrollToRow(at: topRow, at: .top, animated: true)
     }
 }

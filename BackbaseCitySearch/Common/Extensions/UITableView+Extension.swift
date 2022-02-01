@@ -8,8 +8,12 @@
 import UIKit
 
 public extension UITableView {
-    func register<T: UITableViewCell>(cellClass: T.Type) {
+    func registerWithNib<T: UITableViewCell>(cellClass: T.Type) {
         register(UINib(nibName: cellClass.nibName, bundle: nil), forCellReuseIdentifier: cellClass.reuseIdentifier)
+    }
+    
+    func register<T: UITableViewCell>(cellClass: T.Type) {
+        register(cellClass, forCellReuseIdentifier: cellClass.reuseIdentifier)
     }
 
     func dequeue<T: UITableViewCell>(cellClass: T.Type) -> T? {
