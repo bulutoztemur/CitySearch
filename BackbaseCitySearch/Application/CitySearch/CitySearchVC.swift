@@ -18,20 +18,23 @@ class CitySearchVC: UIViewController {
             cityTableView.estimatedRowHeight = 600
         }
     }
-
+    
+    @IBOutlet weak var noDataView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkForNoData()
     }
 }
 
 // MARK: - UITableView DataSource
 extension CitySearchVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.cityList.count
+        return viewModel.filteredCityList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let city = viewModel.cityList[safe: indexPath.row] else { return UITableViewCell() }
+        guard let city = viewModel.filteredCityList[safe: indexPath.row] else { return UITableViewCell() }
         let cell = tableView.dequeue(cellClass: CityCell.self, forIndexPath: indexPath)
         cell.configure(titleLabelText: "\(city.name) - \(city.country)",
                        subtitleLabelText: "\(city.coordinate.latitude ?? 0), \(city.coordinate.longitude ?? 0)",
@@ -52,5 +55,18 @@ extension CitySearchVC: UITableViewDataSource, UITableViewDelegate {
     private func scrollToTop(rowNumber: Int) {
         let topRow = IndexPath(row: rowNumber, section: 0)
         self.cityTableView.scrollToRow(at: topRow, at: .top, animated: true)
+    }
+    
+    private func checkForNoData() {
+        noDataView.isHidden = !viewModel.filteredCityList.isEmpty
+        cityTableView.isHidden = viewModel.filteredCityList.isEmpty
+    }
+}
+
+extension CitySearchVC: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.filterCityList(searchText: searchText)
+        cityTableView.reloadData()
+        checkForNoData()
     }
 }

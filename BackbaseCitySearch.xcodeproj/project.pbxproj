@@ -24,6 +24,7 @@
 		885D5FF227A72EEF00F4700B /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D5FF127A72EEF00F4700B /* UITableViewCell+Extension.swift */; };
 		885D5FF727A7339000F4700B /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D5FF627A7339000F4700B /* UITableView+Extension.swift */; };
 		885D5FFC27A73B9500F4700B /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D5FFB27A73B9500F4700B /* Array+Extension.swift */; };
+		88AF0F7427AAE28500BB11A2 /* FilteringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF0F7327AAE28500BB11A2 /* FilteringUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		885D5FF127A72EEF00F4700B /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		885D5FF627A7339000F4700B /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		885D5FFB27A73B9500F4700B /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		88AF0F7327AAE28500BB11A2 /* FilteringUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +170,7 @@
 				885D5FE527A72C0500F4700B /* CustomViews */,
 				885D5FDC27A6B81900F4700B /* Extensions */,
 				885D5FD327A6AB3F00F4700B /* Models */,
-				885D5FCA27A6AA0B00F4700B /* Managers */,
+				885D5FCA27A6AA0B00F4700B /* Utils */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -192,11 +194,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		885D5FCA27A6AA0B00F4700B /* Managers */ = {
+		885D5FCA27A6AA0B00F4700B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				88AF0F7327AAE28500BB11A2 /* FilteringUtil.swift */,
 			);
-			path = Managers;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		885D5FD327A6AB3F00F4700B /* Models */ = {
@@ -372,6 +375,7 @@
 				885D5FE927A72E6A00F4700B /* CityCell.swift in Sources */,
 				885D5FFC27A73B9500F4700B /* Array+Extension.swift in Sources */,
 				885D5F5627A5F32F00F4700B /* AppDelegate.swift in Sources */,
+				88AF0F7427AAE28500BB11A2 /* FilteringUtil.swift in Sources */,
 				885D5FF227A72EEF00F4700B /* UITableViewCell+Extension.swift in Sources */,
 				885D5FD527A6AB5800F4700B /* City.swift in Sources */,
 				885D5FF727A7339000F4700B /* UITableView+Extension.swift in Sources */,
