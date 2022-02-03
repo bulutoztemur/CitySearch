@@ -8,10 +8,10 @@
 import Foundation
 
 final class CitySearchVM {
-    var cityList: [City]
-    var filteredCityList: [City]
-    
-    init(jsonFileName: String = "cities.json") {
+    var cityList: [City] = []
+    var filteredCityList: [City] = []
+        
+    func decodeJsonData(jsonFileName: String) {
         cityList = Bundle.main.decode([City].self, from: jsonFileName)
         cityList.sort { $0.name.lowercased() < $1.name.lowercased() }
         filteredCityList = cityList
@@ -22,6 +22,7 @@ final class CitySearchVM {
             filteredCityList = cityList
             return
         }
-        filteredCityList = FilteringUtil.filter(list: cityList, prefix: searchText)
+        filteredCityList = FilterUtil.filter(list: cityList, prefix: searchText)
     }
 }
+

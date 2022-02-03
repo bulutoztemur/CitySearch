@@ -23,6 +23,7 @@ class CitySearchVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.decodeJsonData(jsonFileName: "cities.json")
         checkForNoData()
     }
     

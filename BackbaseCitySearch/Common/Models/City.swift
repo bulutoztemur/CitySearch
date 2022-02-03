@@ -23,6 +23,10 @@ extension City: Decodable {
     }
 }
 
+extension City: Filterable {
+    var filterString: String { name }
+}
+
 struct Coordinate {
     var latitude: Double?
     var longitude: Double?
