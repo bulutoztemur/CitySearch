@@ -26,6 +26,8 @@
 		885D5FFC27A73B9500F4700B /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885D5FFB27A73B9500F4700B /* Array+Extension.swift */; };
 		88AF0F7427AAE28500BB11A2 /* FilterUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF0F7327AAE28500BB11A2 /* FilterUtil.swift */; };
 		88AF0FA727AC4F2C00BB11A2 /* Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF0FA627AC4F2C00BB11A2 /* Filterable.swift */; };
+		88AF0FCE27AC680600BB11A2 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 88AF0FCD27AC680600BB11A2 /* empty.json */; };
+		88AF0FD227AC6A4C00BB11A2 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 88AF0FCD27AC680600BB11A2 /* empty.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,7 @@
 		885D5FFB27A73B9500F4700B /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		88AF0F7327AAE28500BB11A2 /* FilterUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterUtil.swift; sourceTree = "<group>"; };
 		88AF0FA627AC4F2C00BB11A2 /* Filterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filterable.swift; sourceTree = "<group>"; };
+		88AF0FCD27AC680600BB11A2 /* empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,7 @@
 			children = (
 				885D5F6C27A5F33000F4700B /* BackbaseCitySearchTests.swift */,
 				885D5F6E27A5F33000F4700B /* Info.plist */,
+				88AF0FCD27AC680600BB11A2 /* empty.json */,
 			);
 			path = BackbaseCitySearchTests;
 			sourceTree = "<group>";
@@ -190,8 +194,8 @@
 		885D5FB427A6A28500F4700B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				885D5F8827A69E8400F4700B /* cities.json */,
 				885D5F5E27A5F33000F4700B /* Assets.xcassets */,
+				885D5F8827A69E8400F4700B /* cities.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -361,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				885D5F8927A69E8400F4700B /* cities.json in Resources */,
+				88AF0FD227AC6A4C00BB11A2 /* empty.json in Resources */,
 				885D5FEA27A72E6A00F4700B /* CityCell.xib in Resources */,
 				885D5FA227A6A1A500F4700B /* CitySearchVC.xib in Resources */,
 				885D5F6227A5F33000F4700B /* LaunchScreen.storyboard in Resources */,
@@ -372,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88AF0FCE27AC680600BB11A2 /* empty.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

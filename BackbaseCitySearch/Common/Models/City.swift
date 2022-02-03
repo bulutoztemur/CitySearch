@@ -27,6 +27,15 @@ extension City: Filterable {
     var filterString: String { name }
 }
 
+extension City: Equatable {
+    static func == (lhs: City, rhs: City) -> Bool {
+        return lhs.name == rhs.name &&
+            lhs.country == rhs.country &&
+            lhs.id == rhs.id &&
+            lhs.coordinate == rhs.coordinate
+    }
+}
+
 struct Coordinate {
     var latitude: Double?
     var longitude: Double?
@@ -38,3 +47,5 @@ extension Coordinate: Decodable {
         case longitude = "lon"
     }
 }
+
+extension Coordinate: Equatable {}

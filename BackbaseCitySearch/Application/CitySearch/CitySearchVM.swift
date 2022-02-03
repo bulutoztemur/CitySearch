@@ -18,11 +18,14 @@ final class CitySearchVM {
     }
     
     func filterCityList(searchText: String) {
-        guard !searchText.isEmpty else {
+        let searchString = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        guard !searchString.isEmpty else {
             filteredCityList = cityList
             return
         }
-        filteredCityList = FilterUtil.filter(list: cityList, prefix: searchText)
+        
+        filteredCityList = FilterUtil.filter(list: cityList, prefix: searchString)
     }
 }
 
