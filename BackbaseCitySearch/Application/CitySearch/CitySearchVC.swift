@@ -38,7 +38,7 @@ class CitySearchVC: UIViewController {
     }
 }
 
-// MARK: - UITableView DataSource
+// MARK: - UITableView DataSource and Delegate
 extension CitySearchVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.filteredCityList.count
@@ -69,6 +69,7 @@ extension CitySearchVC: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+// MARK: - UISearchBar Delegate
 extension CitySearchVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.filterCityList(searchText: searchText)
