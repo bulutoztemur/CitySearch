@@ -27,6 +27,11 @@ class CitySearchVC: UIViewController {
         checkForNoData()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        cityTableView.reloadData()
+    }
+    
     private func checkForNoData() {
         noDataView.isHidden = !viewModel.filteredCityList.isEmpty
         cityTableView.isHidden = viewModel.filteredCityList.isEmpty
@@ -44,7 +49,7 @@ extension CitySearchVC: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeue(cellClass: CityCell.self, forIndexPath: indexPath)
         cell.configure(titleLabelText: "\(city.name) - \(city.country)",
                        subtitleLabelText: "\(city.coordinate.latitude ?? 0), \(city.coordinate.longitude ?? 0)",
-                       tableViewHeight: cityTableView.frame.size.height,
+                       mapHeight: cityTableView.frame.size.height - 100,
                        cityCoordinate: city.coordinate)
         return cell
     }

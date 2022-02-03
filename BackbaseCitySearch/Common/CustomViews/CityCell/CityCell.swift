@@ -18,10 +18,10 @@ final class CityCell: UITableViewCell {
     private var mapViewHeight: CGFloat = 0
     private var coordinate: Coordinate?
     
-    func configure(titleLabelText: String, subtitleLabelText: String, tableViewHeight: CGFloat, cityCoordinate: Coordinate) {
+    func configure(titleLabelText: String, subtitleLabelText: String, mapHeight: CGFloat, cityCoordinate: Coordinate) {
         titleLabel.text = titleLabelText
         subtitleLabel.text = subtitleLabelText
-        mapViewHeight = tableViewHeight - 100
+        mapViewHeight = mapHeight
         coordinate = cityCoordinate
     }
     
