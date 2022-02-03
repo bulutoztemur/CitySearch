@@ -25,6 +25,11 @@ class CitySearchVC: UIViewController {
         super.viewDidLoad()
         checkForNoData()
     }
+    
+    private func checkForNoData() {
+        noDataView.isHidden = !viewModel.filteredCityList.isEmpty
+        cityTableView.isHidden = viewModel.filteredCityList.isEmpty
+    }
 }
 
 // MARK: - UITableView DataSource
@@ -56,11 +61,6 @@ extension CitySearchVC: UITableViewDataSource, UITableViewDelegate {
         let topRow = IndexPath(row: rowNumber, section: 0)
         self.cityTableView.scrollToRow(at: topRow, at: .top, animated: true)
     }
-    
-    private func checkForNoData() {
-        noDataView.isHidden = !viewModel.filteredCityList.isEmpty
-        cityTableView.isHidden = viewModel.filteredCityList.isEmpty
-    }
 }
 
 extension CitySearchVC: UISearchBarDelegate {
@@ -68,5 +68,9 @@ extension CitySearchVC: UISearchBarDelegate {
         viewModel.filterCityList(searchText: searchText)
         cityTableView.reloadData()
         checkForNoData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
