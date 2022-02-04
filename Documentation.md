@@ -3,13 +3,11 @@
 
 
 
-https://user-images.githubusercontent.com/15092443/152491907-2760512f-07bc-44bc-be4f-9cae5ce391d9.mp4
-
 
 
 ### Architecture
 
-- I preferred using MVVM, it is simple to use and it is good at seperating concerns (UI Logic and Business Logic). It makes writing unit test easier. Of course, there are some different architectures, but I think MVVM is suitable for the project of this scale.
+- I preferred using MVVM, it is simple to use and it is good at seperating concerns (UI Logic and Business Logic). It makes writing unit test easier. Of course, there are some different architectures, but I think MVVM is suitable for a project of this scale.
 
 ### Filter Algorithm
 
