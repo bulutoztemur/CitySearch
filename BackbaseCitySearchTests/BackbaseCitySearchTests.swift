@@ -69,7 +69,7 @@ class BackbaseCitySearchTests: XCTestCase {
         XCTAssertEqual(viewModel.cityList, [])
     }
     
-    func test_validate_filter_operation() {
+    func test_validate_filter_operation_for_input_aa() {
         // Given
         XCTAssertEqual(viewModel.filteredCityList, [])
 
@@ -80,6 +80,20 @@ class BackbaseCitySearchTests: XCTestCase {
         // Then
         XCTAssertNotEqual(viewModel.filteredCityList, viewModel.cityList)
         XCTAssertEqual(viewModel.filteredCityList, viewModel.cityList.filter { $0.name.lowercased().hasPrefix("aa") })
+        XCTAssertTrue(viewModel.filteredCityList.map { $0.name.lowercased() }.isSorted(isOrderedBefore: <=))
+    }
+    
+    func test_validate_filter_operation_for_input_tata() {
+        // Given
+        XCTAssertEqual(viewModel.filteredCityList, [])
+
+        // When
+        viewModel.decodeJsonData(jsonFileName: "cities.json")
+        viewModel.filterCityList(searchText: "tata")
+        
+        // Then
+        XCTAssertNotEqual(viewModel.filteredCityList, viewModel.cityList)
+        XCTAssertEqual(viewModel.filteredCityList, viewModel.cityList.filter { $0.name.lowercased().hasPrefix("tata") })
         XCTAssertTrue(viewModel.filteredCityList.map { $0.name.lowercased() }.isSorted(isOrderedBefore: <=))
     }
     
